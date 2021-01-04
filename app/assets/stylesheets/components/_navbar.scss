@@ -1,13 +1,29 @@
-.navbar-lewagon {
+.navbar-container {
   justify-content: space-between;
-  background: white;
-  height: 80px;
+  background: transparent;
+  min-height: 80px;
+  transition: 0.5s;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-container .navbar-collapse {
+  flex-grow: 10;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-container .navbar-brand img {
   width: 120px;
+}
+
+.content-collapsed {
+  margin-top: 80px;
+}
+
+.links {
+  display: flex;
+}
+
+@media(max-width: 767px) {
+  .links {
+    display: none;
+    visibility: hidden;
+  }
 }

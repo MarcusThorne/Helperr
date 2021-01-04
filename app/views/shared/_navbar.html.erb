@@ -1,16 +1,29 @@
-<nav class="navbar sticky-top navbar-light bg-light navbar-lewagon">
-  <div class="container-fluid w-50">
-    <div>
-      <%= link_to "#", class: "navbar-brand" do %>
-        <%= image_tag "helperr-logo-black.png" %>
-      <% end %>
+<nav class="navbar navbar-light bg-light navbar-expand-md navbar-container fixed-top border-bottom">
+  <div class="container-fluid justify-content-around">
+    <%= link_to "root_path", class:"navbar-brand" do %>
+      <%= image_tag "helperr-logo-black.png" %>
+    <% end %>
+
+    <div class="links">
+      <a class="nav-link text-dark mr-4" href="#">Home</a>
+      <a class="nav-link text-dark mr-4" href="#">Services</a>
+      <a class="nav-link text-dark mr-4" href="#">About Us</a>
+      <a class="btn btn-primary nav-item" href="#">Become a Helperr</a>
     </div>
-    
-    <div >
-      <a class="text-dark mr-4" href="#">Home</a>
-      <a class="text-dark mr-4" href="#">Services</a>
-      <a class="text-dark mr-4" href="#">About Us</a>
-      <button class="btn btn-primary">Become a Helperr</button>
-    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
+
+<div class="collapse fixed-top content-collapsed bg-light" id="navbarToggleExternalContent">
+  <div class="navbar-light p-4">
+    <ul class="collapse navbar-collapse navbar-nav justify-content-end d-flex" id="navbarToggleExternalContent">
+      <a class="nav-link text-dark mr-4" href="#">Home</a>
+      <a class="nav-link text-dark mr-4" href="#">Services</a>
+      <a class="nav-link text-dark mr-4" href="#">About Us</a>
+      <a class="btn btn-primary nav-item" href="#">Become a Helperr</a>
+    </ul>
+  </div>
+</div>

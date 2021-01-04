@@ -67,4 +67,4 @@ gem 'cloudinary', '~> 1.12.0'
   # for fake data
 gem 'faker' 
   # allows you to have basic searches
-gem 'pg_search', '~> 2.3.0' 
+gem 'pg_search', '~> 2.3.0'
