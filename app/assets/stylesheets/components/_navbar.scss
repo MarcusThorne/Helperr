@@ -15,10 +15,23 @@
 
 .content-collapsed {
   margin-top: 80px;
+  z-index: 0;
 }
 
 .links {
   display: flex;
+}
+
+.collapse-toggler {
+  visibility: hidden;
+  position: fixed;
+}
+
+.collapse-off {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  visibility: visible;
 }
 
 @media(max-width: 767px) {

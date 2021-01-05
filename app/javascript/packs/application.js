@@ -17,6 +17,7 @@ require("channels")
 
 // External imports
 import 'bootstrap';
+import { closeNavCollapse } from '../components/closeNavCollapse';
 import { moveImage } from '../components/moveImage';
 import { navbarTransparent } from '../components/navbarTransparent';
 
@@ -25,4 +26,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   moveImage();
   navbarTransparent();
+  closeNavCollapse();
 });
