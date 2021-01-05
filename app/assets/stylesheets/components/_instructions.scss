@@ -1,0 +1,21 @@
+.instructions {
+  padding: 40px 400px 24px 400px
+}
+
+.instruction {
+  transition: margin-top 0.5s;
+
+  &:hover {
+    margin-top: -8px;
+  }
+}
+
+.icon {
+  height: 32px;
+}
+
+.step {
+  background-color: rgba(0, 0, 0, 0.116);
+  padding: 4px 24px;
+  border-radius: 16px;
+}
