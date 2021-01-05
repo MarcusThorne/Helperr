@@ -31,4 +31,9 @@
     display: grid;
     height: 120px;
   }
+
+  .search {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+  }
 }
