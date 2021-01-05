@@ -12,6 +12,8 @@ const closeNavCollapse = () => {
         offBox.classList.toggle("collapse-off")
       } else {
         offBox.classList.remove("collapse-off")
+        navbar.classList.remove("show")
+        navbarContent.classList.remove("show")
       }
     }, 500);
   })
