@@ -1,5 +1,3 @@
-import { navbarTransparent } from "./navbarTransparent"
-
 const closeNavCollapse = () => {
   var navbar = document.querySelector(".content-collapsed")
   var button = document.querySelector(".navbar-toggler")

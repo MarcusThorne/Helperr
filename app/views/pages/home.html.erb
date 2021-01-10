@@ -23,38 +23,26 @@
   </div>
 </div>
 
-<div id="carouselDark" class="carousel carousel-dark slide container" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <% @slides.each_with_index do |slide, i| %>
-      <li data-target="#carouselDark" data-slide-to=<%= i %> class="<%= 'active' if i == 0 %>"></li>
-    <% end %>
-  </ol>
-  <!-- Each profession card -->
-  <div class="carousel-inner">
-    <% @slides.each_with_index do |slide, i| %>
-      <div class="carousel-item d-flex <%= 'active' if i == 0 %>">
-        <% slide.each do |profession| %>
-          <div class="card">
-            <img class="profession-image" src="<%= profession[:image] %>" alt="<%= profession[:title] %> image">
-            <div class="card-body">
-              <h5 class="card-title"><%= profession[:title] %></h5>
-              <p class="body-text"><%= profession[:price] %></p>
-            </div>
-          </div>
-        <% end %>
+<div class="carousel">
+  <i class="fas fa-chevron-left prev prev-next"></i>
+  <i class="fas fa-chevron-right next prev-next"></i>
+  <h5 class="carousel-title container fs-4 my-3">Take a look at our highest rated Helperrs</h5>
+  <div class="carousel-wraper container">
+    <% @professions.each do |p| %>
+      <div class="card mx-3">
+      <img src="/assets/professions/<%= p.title.downcase.delete(' ') %>.jpg" alt="" class="card-img-top card-image">
+        <div class="card-body">
+          <h5 class="card-title"><%= p.title %></h5>
+          <p class="body-text"><%= p.price %></p>
+        </div>
       </div>
     <% end %>
   </div>
-  <!-- Next and Previous Buttons -->
-  <a class="carousel-control-prev" href="#carouselDark" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselDark" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
 </div>
+
+
+
+
 
 
 

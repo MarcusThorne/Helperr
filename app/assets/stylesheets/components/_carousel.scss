@@ -1,0 +1,56 @@
+.carousel {
+  position: relative;
+}
+
+.carousel-wraper {
+  height: max-content;
+  width: 320px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.card-image {
+  height: 200px;
+}
+
+.card {
+  width: 320px !important;
+}
+
+.prev-next {
+  bottom: -15%;
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.prev {
+  right: 51%;
+}
+
+.next {
+  left: 51%;
+}
+
+@media (min-width: 720px) {
+  .carousel-wraper {
+    width: 640px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .carousel-wraper {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1820px) {
+  .carousel-wraper {
+    width: 1280px;
+  }
+}
