@@ -5,10 +5,10 @@
 }
 
 .instruction {
-  transition: margin-top 0.5s;
+  transition-duration: .5s;
 
   &:hover {
-    margin-top: -8px;
+    transform: translate(-2px, -4px)
   }
 }
 
