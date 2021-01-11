@@ -1,0 +1,51 @@
+.agree{
+  background-image: url("/assets/icons/agree-blue.png");
+}
+
+.contact {
+  background-image: url("/assets/icons/contact-blue.png");
+}
+
+.find {
+  background-image: url("/assets/icons/find-blue.png");
+}
+
+.pay {
+  background-image: url("/assets/icons/pay-blue.png");
+}
+
+.timedate {
+  background-image: url("/assets/icons/timedate-blue.png");
+}
+
+.wait {
+  background-image: url("/assets/icons/wait-blue.png");
+}
+
+.instruction {
+  &:hover {
+    .agree {
+      background-image: url("/assets/icons/agree-white.png");
+    }
+
+    .contact {
+      background-image: url("/assets/icons/contact-white.png");
+    }
+
+    .find {
+      background-image: url("/assets/icons/find-white.png");
+    }
+
+    .pay {
+      background-image: url("/assets/icons/pay-white.png");
+    }
+      
+    .timedate {
+      background-image: url("/assets/icons/timedate-white.png");
+    }
+    
+    .wait {
+      background-image: url("/assets/icons/wait-white.png");
+    }
+  }
+}

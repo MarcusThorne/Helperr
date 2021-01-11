@@ -2,18 +2,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8px 32px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .instruction {
   transition-duration: .5s;
+  padding: 16px 12px 8px 12px;
+  border-radius: 4px;
 
   &:hover {
-    transform: translate(-2px, -4px)
+    transform: translate(0, -8px);
+    background-color: dodgerblue;
+    color: white;
+
+    .step {
+      background-color: rgb(66, 161, 255);
+    }
   }
 }
 
 .icon {
-  height: 32px;
+  height: 38px;
+  background-size: 38px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .step {
@@ -29,7 +42,7 @@
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 992px) {
   .instructions {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 8px 16px;
