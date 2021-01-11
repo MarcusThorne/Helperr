@@ -1,3 +1,4 @@
+<!-- parallax banner with search bar in the middle and text -->
 <div class="search parallax-window d-flex justify-content-center" data-parallax="scroll" data-image-src="/assets/tools.jpg">
   <div class="rounded m-auto text-center">
     <div class="m-4">
@@ -11,11 +12,13 @@
   </div>
 </div>
 
+<!-- Instructions on how to use the website, in steps -->
+<h5 class="instructions-title container mt-4 mb-n3">How it works!</h5>
 <div class="bg-light d-flex justify-content-center">
-  <div class="instructions text-center py-4">
+  <div class="instructions text-center container py-2 px-4 mt-4">
     <% @instructions.each_with_index do |instruction, index| %>
       <div class="instruction">
-        <img class="icon" src="/assets/icons/<%= instruction.downcase.delete(' ') %>-blue.png" alt="">
+        <div class="icon <%= instruction.downcase.delete(' &') %>"></div>
         <p><%= instruction %></p>
         <p class="step">Step <%= index + 1 %>.</p>
       </div>
@@ -23,11 +26,12 @@
   </div>
 </div>
 
+<!-- Carousel of popular users at current time, Created using slick -->
 <div class="carousel">
   <i class="fas fa-chevron-left prev prev-next"></i>
   <i class="fas fa-chevron-right next prev-next"></i>
   <h5 class="carousel-title container fs-4 my-3">Take a look at our highest rated Helperrs</h5>
-  <div class="carousel-wraper container">
+  <div class="carousel-wraper">
     <% @professions.each do |p| %>
       <div class="card mx-3">
       <img src="/assets/professions/<%= p.title.downcase.delete(' ') %>.jpg" alt="" class="card-img-top card-image">
