@@ -1,9 +1,10 @@
 .instructions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 8px 32px;
+  display: none;
+  visibility: hidden;
   background-color: white;
   border-radius: 8px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 8px 16px;
 }
 
 .instruction {
@@ -35,16 +36,9 @@
   border-radius: 16px;
 }
 
-@media (min-width: 540px) {
-  .instructions {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 8px 32px;
-  }
-}
-
 @media (min-width: 992px) {
   .instructions {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 8px 16px;
+    display: grid;
+    visibility: visible;
   }
 }

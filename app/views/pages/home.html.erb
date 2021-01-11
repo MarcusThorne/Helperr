@@ -2,8 +2,9 @@
 <div class="search parallax-window d-flex justify-content-center" data-parallax="scroll" data-image-src="/assets/tools.jpg">
   <div class="rounded m-auto text-center">
     <div class="m-4">
-      <h1 class="text-light">Find the right <strong>Helperr</strong> for the job</h1>
-      <h5 class="text-light mb-5">Your time, your choice</h5>
+      <h5 class="text-light parallax-text-small mb-3">Saving time and money</h5>
+      <p class="underline mx-auto mb-4"></p>
+      <h1 class="text-light mb-5 parallax-text-big">FIND A HELPERR</h1>
     </div>
     <form class="search-bar">
       <input class="form-control mr-5" name="query" type="search" aria-label="Search" placeholder="Find a helperr...">
@@ -13,9 +14,8 @@
 </div>
 
 <!-- Instructions on how to use the website, in steps -->
-<h5 class="instructions-title container mt-4 mb-n3">How it works!</h5>
 <div class="bg-light d-flex justify-content-center">
-  <div class="instructions text-center container py-2 px-4 mt-4">
+  <div class="instructions text-center container py-2 px-4 mt-n5">
     <% @instructions.each_with_index do |instruction, index| %>
       <div class="instruction">
         <div class="icon <%= instruction.downcase.delete(' &') %>"></div>
@@ -30,17 +30,56 @@
 <div class="carousel">
   <i class="fas fa-chevron-left prev prev-next"></i>
   <i class="fas fa-chevron-right next prev-next"></i>
-  <h5 class="carousel-title container fs-4 my-3">Take a look at our highest rated Helperrs</h5>
-  <div class="carousel-wraper">
+  <h5 class="title container fs-2 my-n1">Featured Helperrs</h5>
+  <div class="carousel-wraper py-5">
     <% @professions.each do |p| %>
-      <div class="card mx-3">
-      <img src="/assets/professions/<%= p.title.downcase.delete(' ') %>.jpg" alt="" class="card-img-top card-image">
+      <div class="card mx-3 featured-card">
+        <img src="/assets/professions/<%= p.title.downcase.delete(' ') %>.jpg" alt="" class="card-img-top card-image">
         <div class="card-body">
           <h5 class="card-title"><%= p.title %></h5>
           <p class="body-text"><%= p.price %></p>
         </div>
       </div>
     <% end %>
+  </div>
+</div>
+
+<!-- Professions list -->
+<div class="container-fluid bg-white professions">
+  <div class="container">
+    <h4 class="title text-primary text-center fs-2 fw-normal">Popular Professions</h4>
+    <p class="professions-subtitle text-center fs-5">Take a look through our most popular jobs</p>
+    <p class="underline mx-auto mb-5"></p>
+    <div class="row justify-content-around profession">
+      <% @professions.each do |p| %>
+        <div class="card m-3 p-0 profession-card">
+          <img src="/assets/professions/<%= p.title.downcase.delete(' ') %>.jpg" alt="" class="card-img-top card-image">
+          <div class="card-body">
+            <h5 class="card-title"><%= p.title %></h5>
+            <p class="body-text"><%= p.price %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <i class="fas fa-chevron-down text-center container d-flex justify-content-around mt-4"></i>
+  </div>
+</div>
+
+<!-- second parallax  -->
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/helping.jpg">
+  <div class="container d-flex justify-content-around text-white text-center">
+    <div class="info-1 mt-50">
+      <h3><i class="far fa-clock"></i>  Your <strong>Terms</strong></h3>
+      <p class="fs-5">Do the job for the price you want, <br>when you want.</p>
+    </div>
+    <div class="info-2">
+      <h3><i class="fas fa-globe-europe"></i>  Your <strong>Profession</strong></h3>
+      <p class="fs-5">Don't stick to a job you hate, <br>get paid for what you love.</p>
+    </div>
+    <div class="info-3">
+      <h3><i class="fas fa-shield-alt"></i>  Your <strong>Protection</strong></h3>
+      <p class="fs-5">We provide a safe and secure way <br>for you to pay.</p>
+    </div>
   </div>
 </div>
 
@@ -53,15 +92,6 @@
 
 
 
-
-
-
-<h4 class="professions-title">Popular Professions</h4>
-<p class="professions-subtitle">Take a quick look through our listings</p>
-<div class="professions-box"></div>
-
-<div class="professions">
-</div>
 
 <div class="d-flex justify-content-center extend-all-professions">
   <p id="seeAllBtn1" class="d-flex justify-content-around"><i class="chevron chevron-professions fas fa-chevron-down"></i></p>
