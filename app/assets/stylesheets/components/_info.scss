@@ -1,0 +1,48 @@
+.info {
+  width: 304px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.info-1 {
+  background-color: #71b3ffb0;
+  height: 360px;
+
+  &:hover {
+    height: 400px;
+  }
+}
+
+.info-2 {
+  background-color: #4a9effc5;
+  height: 460px;
+
+  &:hover {
+    height: 500px;
+  }
+}
+
+.info-3 {
+  background-color: #238affaf;
+  height: 560px;
+
+  &:hover {
+    height: 600px;
+  }
+}
+
+.info-content {
+  position: absolute;
+  bottom: 24px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 90%;
+}
+
+.info-underline {
+  width: 100%;
+  background-color: rgb(0, 94, 189);
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+}

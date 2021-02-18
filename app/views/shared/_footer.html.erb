@@ -1,0 +1,68 @@
+<% about = ["Terms & Privacy", "Help", "Contact Us", "Services"] %>
+<% explore = ["Location", "High Rating", "Profession", "Lower Priced", "Higher Priced"] %>
+
+<div class="footer text-light py-5" style="background-color: rgb(18, 18, 18);">
+  <div class="d-flex w-75 mx-auto justify-content-between">
+    <div>
+      <%= link_to root_path do %>
+        <%= image_tag("helperr-logo-white.png", class:"helperr-logo") %>
+      <% end %>
+
+      <p class="follow-us py-3">Helperr aims to resolve unemployement, <br> reward the hard working and <br> help you find the workers you require</p>
+      <div class="sm-icons">
+        <p>
+          <%= link_to "http://www.facebook.com", :target => "_blank" do %>
+            <i class="fab fa-facebook-f sm-icon"></i>
+          <% end %>
+          <%= link_to "hhtp://www.twitter.com", :target => "_blank" do %>
+            <i class="fab fa-twitter sm-icon px-3"></i>
+          <% end %>
+          <%= link_to "https://www.instagram.com/", :target => "_blank" do %>
+            <i class="fab fa-instagram sm-icon"></i>
+          <% end %>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <div>
+        <h5 class="footer-title">My Account</h5>
+        <p><%= link_to "Log in or Register", new_user_registration_path %></p>
+        <p><%= link_to "Messages" %></p>
+        <p><%= link_to "Listings" %></p>
+        <p><%= link_to "Purchases" %></p>
+        <p><%= link_to "My Details" %></p>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <div>
+        <h5 class="footer-title">About Us</h5>
+        <p><%= link_to "Terms & Privacy" %></p>
+        <p><%= link_to "Help" %></p>
+        <p><%= link_to "Contact us" %></p>
+        <p><%= link_to "About us" %></p>
+      </div>
+    </div>
+
+    <div class="footer-content">
+      <div>
+        <h5 class="footer-title">Explore</h5>
+        <p><%= link_to "Location" %></p>
+        <p><%= link_to "High Rating"%></p>
+        <p><%= link_to "Profession" %></p>
+        <p><%= link_to "Lower Priced" %></p>
+        <p><%= link_to "Higer Priced" %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-around mx-auto pt-5">
+    <p><i class="far fa-copyright"></i>  Helperr Company</p>
+    <div class="d-flex footer-locations">
+      <p class="mr-1 footer-location-text">We help unemployement in</p>
+      <p id="changeText" class="changing-location"> Brighton</p>
+    </div>
+    <p>helperr@support.com</p>
+  </div>
+</div>

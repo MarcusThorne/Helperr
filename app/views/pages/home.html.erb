@@ -20,7 +20,7 @@
       <div class="instruction">
         <div class="icon <%= instruction.downcase.delete(' &') %>"></div>
         <p><%= instruction %></p>
-        <p class="step">Step <%= index + 1 %>.</p>
+        <p class="step mt-4">Step <%= index + 1 %>.</p>
       </div>
     <% end %>
   </div>
@@ -48,7 +48,7 @@
 <div class="container-fluid bg-white professions">
   <div class="container">
     <h4 class="title text-primary text-center fs-2 fw-normal">Popular Professions</h4>
-    <p class="professions-subtitle text-center fs-5">Take a look through our most popular jobs</p>
+    <p class="professions-subtitle text-center fs-5 mb-4">Take a look through our most popular jobs</p>
     <p class="underline mx-auto mb-5"></p>
     <div class="row justify-content-around profession">
       <% @professions.each do |p| %>
@@ -65,166 +65,82 @@
   </div>
 </div>
 
-
-
+<!-- Professions list -->
 <div class="bg-light p-5 mb-5 text-center container">
   <h2 class="mt-5 title fs-2">About Us</h2>
   <p class="underline container"></p>
-  <p class="au-description mt-5 fs-5">Our aim is to help those that are having a hard time finding work, we provide the customers and you provide to skills! Our business is always growing and we aim to have people of all types of work showcasing there skills on our website. Safety is our vertue, we provide a safe  and secure place for everyone to find the work they need and have  an easy and secure way to be paid!</p>
+  <p class="au-description mt-5 fs-6">Our aim is to help those that are having a hard time finding work, we provide the customers and you provide to skills! Our business is always growing 
+  and we aim to have people of all types of work showcasing there skills on our website. Safety is our vertue, we provide a safe  and secure place for everyone to find the work they need 
+  and have  an easy and secure way to be paid!</p>
 </div>
-
-
 
 <!-- second parallax  -->
-<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/helping.jpg">
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/helping.jpg" style="height: 80vh;">
   <div class="container d-flex justify-content-around text-white text-center">
-    <div class="info info-1 mt-50">
-      <div class="info-content">
-        <h3><i class="far fa-clock"></i>  Your <strong>Terms</strong></h3>
-        <p class="fs-6">Do the job for the price you want, <br>when you want.</p>
+    <% @info.each do |i| %>
+      <div class="info mt-50 <%= i[:name] %>">
+        <div class="info-content">
+          <%= i[:title] %>
+          <%= i[:text] %>
+        </div>
+        <div class="info-underline"></div>
       </div>
-      <div class="info-underline"></div>
-    </div>
-    <div class="info info-2">
-      <div class="info-content">
-        <h3><i class="fas fa-globe-europe"></i>  Your <strong>Profession</strong></h3>
-        <p class="fs-6">Don't stick to a job you hate, <br>get paid for what you love.</p>
-      </div>
-      <div class="info-underline"></div>
-    </div>
-    <div class="info info-3">
-      <div class="info-content">
-        <h3><i class="fas fa-shield-alt"></i>  Your <strong>Protection</strong></h3>
-        <p class="fs-6">We provide a safe and secure way <br>for you to pay.</p>
-      </div>
-      <div class="info-underline"></div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container-fluid my-auto d-flex flex-column justify-content-center" style="height: 704px; background: rgb(18, 18, 18); position: relative;">
-  <div class="review-line" style="height: 2px; width: 90%; background-color: rgba(255, 255, 255, 1); position: absolute; top: 0; right: 0;"></div>
-  <%# <div class="review-line" style="height: 8px; width: 30%; background-color: dodgerblue; position: absolute; top: 0; right: 0;"></div> %>
-  <div class="text-end" style="margin-top: -80px; margin-bottom: 104px; position: relative; left: -16px; height: 80px; background-color: rgb(20, 20, 20); width: 30vw; font-size: 24px;"><p style="color: white; height: 100%; background-color: rgb(30, 30, 30); margin-left: 80px; padding: 20px">Customer Reviews</p></div>
-  <div class="review text-light d-flex flex-column text-center mx-auto justify-content-around w-50 mt-5">
-    <h1 class="review-name mb-2">John Smith</h1>
-    <p class="underline mx-auto mb-5"></p>
-    <div class="review-text">
-      <i class="fas fa-quote-left fs-2 text-start mr-5 mb-2"></i>
-      <h5 class="my-2"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.</i></h5>
-      <i class="fas fa-quote-right fs-2 ml-5"></i>
-    </div>
-  </div>
-  <div class="d-flex text-light mx-auto" style="font-size: 12px; margin-bottom: 60px; margin-top: 104px;">
-    <% 4.times do %>
-      <i class="fas fa-circle mx-1"></i>
     <% end %>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-<div class="d-flex justify-content-center extend-all-professions">
-  <p id="seeAllBtn1" class="d-flex justify-content-around"><i class="chevron chevron-professions fas fa-chevron-down"></i></p>
-</div>
-
-
-<div class="about-margin">
-  <div class="about-us">
-
-    <div class="about-us-content-1">
+<!-- How it works and infomation  -->
+<div class="container-fluid my-auto d-flex flex-column justify-content-center" style="height: 704px; background: rgb(18, 18, 18); position: relative;">
+  <div class="review-line" style="height: 2px; width: 100%; background-color: rgba(255, 255, 255, 0.5); position: absolute; top: 0; right: 0;"></div>
+  <!-- steps -->
+  <div class="container-fluid text-light" style="background-color: rgb(18, 18, 18);">
+    <div class="container">
       <div class="about-us-title">
-        <h4 class="about-title">How it Works</h4>
-        <div class="about-box"></div>
+        <h2 class="about-title">How it Works</h2>
+        <div class="underline mb-5"></div>
       </div>
-
-      <div class="hw-description">
-        <div class="steps step1 active-step" >
-          <%= image_tag " ", class:"about-image about-image1" %>
+      <% @steps.each do |s| %>
+        <div class="steps step<%= s.id %> active-step" >
           <div class="about-info-odd">
-            <h5>1. Find a Healerr</h5>
-            <p>From our selection of professions and users, find whats best suited to you!</p>
+            <h5><%= s.title %></h5>
+            <p><%= s.info %></p>
           </div>
         </div>
-
-        <div class="steps step4">
-          <div class="about-info-even">
-            <h5>4. Agree on a Price</h5>
-            <p>Agree on a price you're happy with, pay no more than the agreed price once the jobs complete!</p>
-          </div>
-          <%= image_tag "",  class:"about-image about-image2" %>
-        </div>
-
-        <div class="steps step2" >
-          <div class="about-info-even">
-            <h5>2. Contact them</h5>
-            <p>Contact the helper via our chat box, or you can email them or call. It's up to you.</p>
-          </div>
-          <%= image_tag " ", class:"about-image about-image3" %>
-        </div>
-
-        <div class="steps step5" >
-          <%= image_tag " ", class:"about-image about-image4" %>
-          <div class="about-info-odd">
-            <h5>5. Wait for the task to be complete</h5>
-            <p>Sit and relax while our helper completes the task you've assigned.</p>
-          </div>
-        </div>
-
-        <div class="steps step3" >
-          <%= image_tag "", class:"about-image about-image5" %>
-          <div class="about-info-odd">
-            <h5>3. Agree on a Time & Date</h5>
-            <p>Find a helper thats willing to help you on the days that are best for you.</p>
-          </div>
-        </div>
-
-        <div class="steps step6" >
-          <div class="about-info-even">
-            <h5>6. Pay the helperr</h5>
-            <p>Job done! Now all that's left to do is complete the payment and perhaps give the helper your feedback.</p>
-          </div>
-          <%= image_tag "", class:"about-image about-image6" %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
 
-
-<div class="d-flex justify-content-center extend-all-featured">
-  <p id="seeAllBtn2" class="d-flex justify-content-around"><i class="chevron chevron-featured fas fa-chevron-down"></i></p>
+<!-- Cutomer reviews -->
+<div class="review text-dark d-flex flex-column text-center mx-auto justify-content-around w-50 mt-5">
+  <h1 class="review-name mb-2">John Smith</h1>
+  <p class="underline mx-auto mb-5"></p>
+  <div class="review-text">
+    <i class="fas fa-quote-left fs-2 text-start mr-5 mb-2"></i>
+    <h5 class="my-2"><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae 
+    illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.</i></h5>
+    <i class="fas fa-quote-right fs-2 ml-5"></i>
+  </div>
+</div>
+<div class="d-flex text-light mx-auto" style="font-size: 12px; margin-bottom: 60px; margin-top: 104px;">
+  <% 4.times do %>
+    <i class="fas fa-circle mx-1"></i>
+  <% end %>
 </div>
 
-
-
-
-
-<div>
-
-</div>
-
-
-<div class="newsletter-box">
-  <div class="newsletter">
+<!-- Newsletter -->
+<div class="bg-light">
+  <div class="container d-flex justify-content-around p-4 text-dark">
     <div>
       <h4>Newsletter</h4>
       <p class="newsletter-text">Text about newsletter</p>
     </div>
-
-    <div>
-      <input name="query" type="search" aria-label="Search" placeholder="Email" class="search-input newsletter-input">
+    <div class="mt-4 d-flex">
+      <input name="query" type="search" aria-label="Search" placeholder="Email" class="search-input form-control">
       <button class="btn btn-primary search-submit" type="submit">Subscribe</button>
     </div>
   </div>
 </div>
 
-
-<i class="fas fa-chevron-circle-up back-to-top"></i>
+<!-- Back to top button -->
+<i class="fas fa-chevron-up" id="backToTop" style="background-color: dodgerblue; border-radius: 2px; padding: 16px; position: fixed; right: 40px; bottom: 40px;"></i>
