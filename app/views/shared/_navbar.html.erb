@@ -6,6 +6,7 @@
       <a class="nav-link ml-1 <%= 'blue-link' if current_page?(root_path) %>" href="#">Home</a>
       <a class="nav-link ml-1 <%= 'blue-link' if current_page?(new_user_session_path) %>" href="#">Services</a>
       <a class="nav-link ml-1 <%= 'blue-link' if current_page?(new_user_session_path) %>" href="#">About Us</a>
+      <div style="border-right: 1px"></div>
       <a class="nav-link ml-1 <%= 'blue-link' if current_page?(new_user_session_path) %>" href="#">Sign In <i class="fas fa-sign-in-alt pl-1 mx-auto" style="font-size: 12px"></i></a>
       <a class="btn btn-primary nav-button ml-4" href="#">Become a Helperr</a>
     </div>
@@ -17,12 +18,12 @@
 
 <!-- Drop down menu for mobile -->
 <div class="collapse fixed-top content-collapsed" id="navbarToggleExternalContent">
-  <div class="extended-content  p-4">
-    <ul class="collapse navbar-collapse container text-end" id="navbarToggleExternalContent">
-      <a class="nav-link" href="#">Home</a>
-      <a class="nav-link" href="#">Services</a>
-      <a class="nav-link" href="#">About Us</a>
-      <a class="btn btn-primary nav-button" href="#">Become a Helperr</a>
+  <div class="extended-content  p-3">
+    <ul class="collapse navbar-collapse container text-center" id="navbarToggleExternalContent">
+      <a class="nav-link border-bottom py-3" href="#">Home</a>
+      <a class="nav-link border-bottom py-3" href="#">Services</a>
+      <a class="nav-link border-bottom py-3" href="#">About Us</a>
+      <a class="btn btn-primary nav-button mt-4 mb-0" href="#">Become a Helperr</a>
     </ul>
   </div>
 </div>

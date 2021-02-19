@@ -72,35 +72,38 @@
   <p class="au-description mt-5 fs-6">Our aim is to help those that are having a hard time finding work, we provide the customers and you provide to skills! Our business is always growing 
   and we aim to have people of all types of work showcasing there skills on our website. Safety is our vertue, we provide a safe  and secure place for everyone to find the work they need 
   and have  an easy and secure way to be paid!</p>
+  <div class="btn btn-primary mt-5">Learn More!</div>
 </div>
 
 <!-- second parallax  -->
 <div class="parallax-window" data-parallax="scroll" data-image-src="/assets/helping.jpg" style="height: 80vh;">
-  <div class="container d-flex justify-content-around text-white text-center">
-    <% @info.each do |i| %>
-      <div class="info mt-50 <%= i[:name] %>">
-        <div class="info-content">
-          <%= i[:title] %>
-          <%= i[:text] %>
+  <div class="container d-flex justify-content-around text-center">
+    <div class="row justify-content-around">
+      <% @info.each do |i| %>
+        <div class="info col-md m-0 p-0 mt-50 <%= i[:name] %> <%= if i[:name] == 'info-1' then 'text-dark' elsif i[:name] == 'info-3' || i[:name] == 'info-2' then 'text-light' end %>">
+          <div class="info-content">
+            <%= i[:title] %>
+            <%= i[:text] %>
+          </div>
+          <div class="info-underline"></div>
         </div>
-        <div class="info-underline"></div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
 <!-- How it works and infomation  -->
-<div class="container-fluid my-auto d-flex flex-column justify-content-center" style="height: 704px; background: rgb(18, 18, 18); position: relative;">
+<div class="container-fluid my-auto py-5 d-flex flex-column justify-content-center" style="background: rgb(18, 18, 18); position: relative;">
   <div class="review-line" style="height: 2px; width: 100%; background-color: rgba(255, 255, 255, 0.5); position: absolute; top: 0; right: 0;"></div>
   <!-- steps -->
-  <div class="container-fluid text-light" style="background-color: rgb(18, 18, 18);">
-    <div class="container">
-      <div class="about-us-title">
-        <h2 class="about-title">How it Works</h2>
-        <div class="underline mb-5"></div>
-      </div>
+  <div class="container">
+    <div class="about-us-title">
+      <h2 class="about-title text-light">How it Works</h2>
+      <div class="underline mb-5"></div>
+    </div>
+    <div class="steps">
       <% @steps.each do |s| %>
-        <div class="steps step<%= s.id %> active-step" >
+        <div class="step<%= s.id %> active-step m-2 p-4 rounded" style="color: rgba(255, 255, 255, 0.7)">
           <div class="about-info-odd">
             <h5><%= s.title %></h5>
             <p><%= s.info %></p>
@@ -143,4 +146,4 @@
 </div>
 
 <!-- Back to top button -->
-<i class="fas fa-chevron-up" id="backToTop" style="background-color: dodgerblue; border-radius: 2px; padding: 16px; position: fixed; right: 40px; bottom: 40px;"></i>
+<i class="fas fa-chevron-up text-light" id="backToTop" style="background-color: rgba(22, 127, 251, 0.5); border-radius: 2px; padding: 16px; position: fixed; right: 16px; bottom: 16px;"></i>

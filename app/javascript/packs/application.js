@@ -18,13 +18,11 @@ require("channels")
 // External imports
 import 'bootstrap';
 import { backToTop } from '../components/backToTop';
-import { closeNavCollapse } from '../components/closeNavCollapse';
 import { navbarTransparent } from '../components/navbarTransparent';
 
 //Internal imports 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  closeNavCollapse();
   navbarTransparent();
   backToTop();
 });

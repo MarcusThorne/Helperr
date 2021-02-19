@@ -1,9 +1,9 @@
 <% about = ["Terms & Privacy", "Help", "Contact Us", "Services"] %>
 <% explore = ["Location", "High Rating", "Profession", "Lower Priced", "Higher Priced"] %>
 
-<div class="footer text-light py-5" style="background-color: rgb(18, 18, 18);">
-  <div class="d-flex w-75 mx-auto justify-content-between">
-    <div>
+<div class="footer text-light py-5 container-fluid" style="background-color: rgb(18, 18, 18);">
+  <div class="d-flex w-75 mx-auto justify-content-between row" style="color: rgba(255, 255, 255, 0.7)">
+    <div class="col-md">
       <%= link_to root_path do %>
         <%= image_tag("helperr-logo-white.png", class:"helperr-logo") %>
       <% end %>
@@ -24,9 +24,9 @@
       </div>
     </div>
 
-    <div class="footer-content">
+    <div class="footer-content col-md">
       <div>
-        <h5 class="footer-title">My Account</h5>
+        <h5 class="footer-title mt-5">My Account</h5>
         <p><%= link_to "Log in or Register", new_user_registration_path %></p>
         <p><%= link_to "Messages" %></p>
         <p><%= link_to "Listings" %></p>
@@ -35,9 +35,9 @@
       </div>
     </div>
 
-    <div class="footer-content">
+    <div class="footer-content col-md">
       <div>
-        <h5 class="footer-title">About Us</h5>
+        <h5 class="footer-title mt-4">About Us</h5>
         <p><%= link_to "Terms & Privacy" %></p>
         <p><%= link_to "Help" %></p>
         <p><%= link_to "Contact us" %></p>
@@ -45,9 +45,9 @@
       </div>
     </div>
 
-    <div class="footer-content">
+    <div class="footer-content col-md">
       <div>
-        <h5 class="footer-title">Explore</h5>
+        <h5 class="footer-title mt-4">Explore</h5>
         <p><%= link_to "Location" %></p>
         <p><%= link_to "High Rating"%></p>
         <p><%= link_to "Profession" %></p>

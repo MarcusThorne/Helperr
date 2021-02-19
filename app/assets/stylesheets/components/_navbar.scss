@@ -51,10 +51,12 @@
 }
 
 .content-collapsed {
-  margin-top: 80px;
+  margin-top: 80px !important;
   z-index: 1;
-  background-color: transparent;
+  background-color: white;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  width: 80vw;
+  margin: auto
 }
 
 .collapse-toggler {

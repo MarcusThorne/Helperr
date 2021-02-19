@@ -1,39 +1,26 @@
 .info {
-  width: 304px;
   position: relative;
   transition: 0.5s;
+  height: 200px;
+  width: 90vw;
+  max-width: 1104px
 }
 
 .info-1 {
-  background-color: #71b3ffb0;
-  height: 360px;
-
-  &:hover {
-    height: 400px;
-  }
+  background-color: #add3ffb0;
 }
 
 .info-2 {
-  background-color: #4a9effc5;
-  height: 460px;
-
-  &:hover {
-    height: 500px;
-  }
+  background-color: #62abffc5;
 }
 
 .info-3 {
-  background-color: #238affaf;
-  height: 560px;
-
-  &:hover {
-    height: 600px;
-  }
+  background-color: #097cffaf;
 }
 
 .info-content {
   position: absolute;
-  bottom: 24px;
+  bottom: 0px;
   transform: translate(-50%, -50%);
   left: 50%;
   width: 90%;
@@ -45,4 +32,30 @@
   height: 8px;
   position: absolute;
   bottom: 0;
+}
+
+@media(min-width: 768px) {
+  .info-1 {
+    height: 300px;
+
+    &:hover {
+      height: 340px;
+    }
+  }
+
+  .info-2 {
+    height: 360px;
+
+    &:hover {
+      height: 400px;
+    }
+  }
+
+  .info-3 {
+    height: 420px;
+
+    &:hover {
+      height: 460px;
+    }
+  }
 }
